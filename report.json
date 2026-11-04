@@ -1,0 +1,80 @@
+{
+  "scope": "Hand-authored symbolic frame fixture; no Instance API, robot, or video model",
+  "task": "object in bin AND drawer closed at final observable frame",
+  "episodes": [
+    {
+      "episode": "clean_success",
+      "any_frame": "success",
+      "terminal_evidence": "success",
+      "final_frame": [
+        "T",
+        "T"
+      ]
+    },
+    {
+      "episode": "transient_success",
+      "any_frame": "success",
+      "terminal_evidence": "failure",
+      "final_frame": [
+        "F",
+        "T"
+      ]
+    },
+    {
+      "episode": "drawer_reopens",
+      "any_frame": "success",
+      "terminal_evidence": "failure",
+      "final_frame": [
+        "T",
+        "F"
+      ]
+    },
+    {
+      "episode": "object_removed",
+      "any_frame": "success",
+      "terminal_evidence": "failure",
+      "final_frame": [
+        "F",
+        "F"
+      ]
+    },
+    {
+      "episode": "final_occlusion",
+      "any_frame": "success",
+      "terminal_evidence": "unknown",
+      "final_frame": [
+        "?",
+        "T"
+      ]
+    },
+    {
+      "episode": "never_in_bin",
+      "any_frame": "failure",
+      "terminal_evidence": "failure",
+      "final_frame": [
+        "F",
+        "T"
+      ]
+    },
+    {
+      "episode": "late_success",
+      "any_frame": "success",
+      "terminal_evidence": "success",
+      "final_frame": [
+        "T",
+        "T"
+      ]
+    },
+    {
+      "episode": "all_occluded",
+      "any_frame": "failure",
+      "terminal_evidence": "unknown",
+      "final_frame": [
+        "?",
+        "?"
+      ]
+    }
+  ],
+  "disagreements": 5,
+  "unknowns": 2
+}
